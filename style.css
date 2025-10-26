@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Julee&family=Kranky&family=Lugrasimo&family=Nothing+You+Could+Do&family=Pacifico&family=Quintessential&family=Rancho&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    background: linear-gradient(90deg, #89d957, #c9e265, #005410);
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, #8c52ff, #5ce1e6);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+    color: rgb(146, 39, 39);
+}
+
+header .logo {
+    margin: 1rem;
+    font-size: 2.5rem;
+    color: #100f0f;
+}
+
+header .logo p {
+    font-family: "Quintessential", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header .searchbar {
+    color: #4d213a;
+    width: 83%;
+    height: 2.8rem;
+    margin: 10px;
+}
+
+header .searchbar input {
+    background: #fff;
+    height: 100%;
+    font-style: bold;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 1.5rem;
+    border: none;
+}
+
+header a {
+    margin: 1rem;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+main {
+    margin-top: 10rem;
+    margin-left: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+main h1 {
+    margin-top: 2rem;
+    font-family: "Kranky", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5rem;
+}
+
+main h2 {
+    font-family: "Quintessential", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 1rem;
+    font-size: 2.5rem;
+}
+
+main .addnew {
+    margin-top: 1rem;
+}
+
+main .addnew button {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    background: linear-gradient(90deg, #cdffd8, #94b9ff);
+    border: none;
+    border-radius: 2rem;
+    color: #000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+}
+
+main .addnew button:hover {
+    background: linear-gradient(90deg, #94b9ff, #cdffd8);
+    color: #111111;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
