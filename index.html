@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodeNest</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
     <header>
         <div class="logo">
@@ -23,23 +22,22 @@
         <h1>Welcome to CodeNest</h1>
         <h2>Save, Organize Your DSA Code, Important Links Effortlessly</h2>
         <div class="addnew">
-            <button>Add New Code</button>
-            <button>View Save Code</button>
+            <button id="add">Add New Code</button>
+            <button id="view">View Save Code</button>
         </div>
         <!-- note-section -->
-        <div class="codeContainer">
-            <div class="codeForm">
+        <div class="codeContainer" id="codeContainer">
+            <!-- <div class="codeForm">
                 <input type="text" placeholder="DSA Question Title">
                 <textarea id="yourCode" rows="15" placeholder="Paste your solution"></textarea>
                <div class="codebutton">
-                 <button id="SaveCode">Save Code</button>
-                <button id="deleteCode">delete Code</button>
+                 <button class="saveCode">Save Code</button>
+                 <button class="deleteCode">Delete Code</button>
                </div>
-            </div>
-        </div>
+            </div> -->
+        </div> 
     </main>
     <script src="app.js"></script>
 </body>
-
 
 </html>
