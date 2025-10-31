@@ -105,3 +105,33 @@ savedData.forEach((item) => {
 /*The addEventListener() method of the EventTarget interface sets up
  a function that will be called whenever the specified event is delivered to the target.*/
 window.addEventListener("load", loadFromLocalStorage);
+
+//searchbar functionality
+const searchInput = document.getElementById("searchInput");
+//keydoiwn event listener controls the keys pressed in the keyboard
+searchInput.addEventListener("keydown", function (event) {
+  //Select all elements in the document that have the class .codeForm.
+    const allForms = document.querySelectorAll(".codeForm");
+    if(event.key === "Enter"){
+      /*event.preventDefault() method tells the user agent that if the event does not get explicitly handled,
+       its default action should not be taken as it normally would be.*/
+      event.preventDefault();
+      /*searchInput.value.trim().toLowerCase() is used to get the current value of the search input field,
+       remove any leading or trailing whitespace with trim(),
+       and convert the string to lowercase with toLowerCase() for case-insensitive comparison.*/
+      const searchQuery = searchInput.value.trim().toLowerCase();
+      let found = false;
+      /* title.includes(searchQuery) checks if the title string contains the searchQuery substring.
+       This allows for partial matches, meaning that if the search query is a part of the title,
+       it will still be considered a match.*/
+    allForms.forEach((form) => {
+      const title = form.querySelector(".questionTitle").value.trim().toLowerCase();
+      if(title === searchQuery || title.includes(searchQuery)){
+        form.style.display = "flex";
+        found = true;
+      }else{
+        form.style.display="none";
+      }
+    })
+}});
+
