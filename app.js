@@ -132,6 +132,12 @@ searchInput.addEventListener("keydown", function (event) {
       }else{
         form.style.display="none";
       }
+
     })
+     if(!found){
+     alert("Result Not Found");
+     allForms.forEach((form) => (form.style.display = "flex"));
+    }
 }});
+
 
