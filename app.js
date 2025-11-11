@@ -140,4 +140,58 @@ searchInput.addEventListener("keydown", function (event) {
     }
 }});
 
+//importing database created in dsadb.js and show it as a list with checkboxes,if you click on "dsa problems" button it will open\\
+import {problemsDB} from "./dsadb.js";
+const scrollDiv=document.getElementById("dsaScroll");
+let problems="";
+Object.keys(problemsDB).forEach(level => {
+  problems+=`<div class="problem-section">
+            <h3>${level.charAt(0).toUpperCase() + level.slice(1)} Problems</h3>
+            <ul>`;
+               problemsDB[level].forEach(name =>{
+                const id = name.toLowerCase().replace(/ /g, "");  //creates a unique id for each problem name like [Second Largest Element to secondlargestelement]//
+                problems+=`<li><label><input type="checkbox" value="${id}">${name}</label></li>`;
+               });
+               problems+='</ul></div>';
+})
+scrollDiv.innerHTML=problems;
+
+//saving the checked questions//
+function savedCheckedProblems(){
+  const checkBoxes = document.querySelectorAll("#dsaScroll input[type='checkbox']");
+   const checked = [];
+   checkBoxes.forEach(cb=>{
+    if(cb.checked) checked.push(cb.value); //basically if you checked it,it will add to "checked" array//
+   })
+   localStorage.setItem("checkedProblems", JSON.stringify(checked));
+}
+//Load checked Problems//
+function loadCheckedProblems(){
+  const saved = JSON.parse(localStorage.getItem("checkedProblems")) || [];
+  const checkBoxes = document.querySelectorAll("#dsaScroll input[type='checkbox']");
+  checkBoxes.forEach(cb=>{
+    if(saved.includes(cb.value)){
+    cb.checked=true;
+  }
+  })
+}
+//This line is attaching an event listener to every checkbox, //
+// so that whenever any checkbox is clicked (checked/unchecked), your saveCheckedProblems() function runs.//
+document.querySelectorAll("#dsaScroll input[type='checkbox']")
+  .forEach(cb => cb.addEventListener("change",savedCheckedProblems));
+
+loadCheckedProblems();
+
+const dsaPanel = document.getElementById("dsaPanel");
+const viewBtn = document.getElementById("view");
+const closePanel = document.getElementById("closePanel");
+
+viewBtn.addEventListener("click",()=>{
+  dsaPanel.classList.toggle("open");
+})
+closePanel.addEventListener("click",()=>{
+  dsaPanel.classList.remove("open");
+})
+
+
 
