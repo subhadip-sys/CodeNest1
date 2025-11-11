@@ -179,6 +179,104 @@ main .addnew #view {
 .codeContainer .codeForm .deleteCode {
     background: linear-gradient(90deg, #ff3131, #ff914d);
 }
+
+.dsa-panel {
+    position: fixed;
+    top: 0;
+    right: -340px;
+    width: 330px;
+    height: 100vh;
+    background: linear-gradient(90deg,#000000,#737373);
+    border-radius: 1.2rem 0 0 1.2rem;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+}
+.dsa-panel.open{
+    right: 0;
+}
+
+.dsa-scroll {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+/* Custom scrollbar */
+.dsa-scroll::-webkit-scrollbar {
+    width: 6px;
+}
+
+.dsa-scroll::-webkit-scrollbar-thumb {
+    background: #f0c674;
+    border-radius: 10px;
+}
+
+.dsa-scroll::-webkit-scrollbar-track {
+    background: #444;
+}
+.dsa-panel h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-left: 30px;
+  color: #fff;
+}
+
+.problem-section {
+  margin-bottom: 25px;
+  margin-left: 30px;
+  color: wheat;
+}
+
+.problem-section h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 15px 0 10px;
+  color: #ee9898;
+}
+
+.problem-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.problem-section li {
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+}
+
+.problem-section label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+}
+
+.problem-section input[type="checkbox"] {
+  accent-color: #f5b400; /* golden-yellow tick */
+  transform: scale(1.2);
+}
+
+#closePanel {
+  width: 100%;
+  padding: 10px;
+  background: #ff5555;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#closePanel:hover {
+  background: #ff3333;
+}
 /* responsiveness for phone */
 @media(max-width:480px){
     .codeContainer{
@@ -196,3 +294,4 @@ main .addnew #view {
         gap: 30px;
     }
 }
+
