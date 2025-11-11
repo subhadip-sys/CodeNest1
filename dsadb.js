@@ -1,4 +1,4 @@
-const problemsDB = {
+export const problemsDB = {
     easy: [
         "Second Largest Element",
         "Third Largest Element",
@@ -48,3 +48,4 @@ const problemsDB = {
         "Shortest Common Supersequence"
     ]
 };
+
