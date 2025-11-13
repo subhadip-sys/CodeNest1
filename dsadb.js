@@ -16,7 +16,13 @@ export const problemsDB = {
         "Reverse a String",
         "Reverse Words",
         "Check for Rotation",
-        "Roman to integer"
+        "Roman to integer",
+        "Plus one",
+        "Alternate Positive Negative",
+        "Array Leaders",
+        "Missing and Repeating in Array",
+        "Missing Ranges of numbers",
+        "Sum of all Subarray",
     ],
 
     medium: [
@@ -28,10 +34,23 @@ export const problemsDB = {
         "Maximum Product Subarray",
         "Product of Array Except Self",
         "Subarray with Product Less Than K",
+        "Split into three equal Sum segmants",
+        "Maximum Consecutive 1s After Flipping 0s",
+        "Last moment before ants fall out of plank",
+        "Find 0 with farthest 1s in a Binary",
+        "Intersection of Interval list",
+        "Rearrange Array Element by sign",
+        "Meeting Scheduler for two persons",
+        "Longest Mountain Subarray",
+        "Transform and sort array",
+        "Minimum Swaps to group all ones",
+        "Minimum moves to equalize array",
+        "Minimum indices to equal even-odd sums",
         "Integer to Words",
         "Fizz Buzz",
         "Palindromic Sentence Check",
-        "Isomorphic Strings"
+        "Isomorphic Strings",
+
     ],
 
     hard: [
@@ -41,6 +60,10 @@ export const problemsDB = {
         "Jump Game",
         "Closest Subsequence Sum",
         "Smallest Non-Representable Sum",
+        "Smallest Range having Elements from K-List",
+        "Count Subarrays with K distinct elements",
+        "Next Smallest Palindrome",
+        "Maximum Sum Among All Rotation",
         "Repeatedly Remove Duplicates",
         "Multiply Two Strings",
         "Search Pattern (KMP Algorithm)",
@@ -48,4 +71,3 @@ export const problemsDB = {
         "Shortest Common Supersequence"
     ]
 };
-
