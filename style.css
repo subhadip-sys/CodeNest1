@@ -135,7 +135,7 @@ main .addnew #view {
     display: flex;
     flex-direction: column;
     border: 3px solid rgb(63, 10, 26);
-    border-bottom-left-radius: 3rem;
+    border-bottom-left-radius: 2.3rem;
 }
 
 .codeContainer .codeForm input {
@@ -311,4 +311,5 @@ main .addnew #view {
 #closePanel:hover {
   background: #ff3333;
 }
+
 
