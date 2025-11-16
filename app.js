@@ -186,12 +186,29 @@ const dsaPanel = document.getElementById("dsaPanel");
 const viewBtn = document.getElementById("view");
 const closePanel = document.getElementById("closePanel");
 
-viewBtn.addEventListener("click",()=>{
+//when a event happens,it basically go from document to button and then button to document
+//document to button is called capturing phase
+//then event happens(target phase)
+//then it goes button to document which is called bubble phase(as it goes upward like bubbles)
+//e.stoppropagation does not let the event do the bubble phase
+
+
+viewBtn.addEventListener("click",(e)=>{
+  e.stopPropagation();
   dsaPanel.classList.toggle("open");
 })
-closePanel.addEventListener("click",()=>{
+closePanel.addEventListener("click",(e)=>{
+  e.stopPropagation();
   dsaPanel.classList.remove("open");
 })
+
+//clicking outside the dsa panel will close the div
+// //so we have to use e.stopPropagation function//
+document.addEventListener("click",()=>{
+    dsaPanel.classList.remove("open");
+})
+
+
 
 
 
