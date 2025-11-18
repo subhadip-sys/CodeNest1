@@ -204,9 +204,10 @@ closePanel.addEventListener("click",(e)=>{
 
 //clicking outside the dsa panel will close the div
 // //so we have to use e.stopPropagation function//
-document.addEventListener("click",()=>{
+document.getElementById("codeContainer").addEventListener("click",()=>{
     dsaPanel.classList.remove("open");
 })
+
 
 
 
