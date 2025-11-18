@@ -311,5 +311,11 @@ main .addnew #view {
 #closePanel:hover {
   background: #ff3333;
 }
+@media(max-width:767px){
+    html{
+        background: #221a1a;
+    }
+}
+
 
 
