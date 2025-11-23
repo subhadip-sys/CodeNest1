@@ -50,7 +50,7 @@ export const problemsDB = {
         "Fizz Buzz",
         "Palindromic Sentence Check",
         "Isomorphic Strings",
-
+        "Sort Colors"
     ],
 
     hard: [
@@ -71,3 +71,4 @@ export const problemsDB = {
         "Shortest Common Supersequence"
     ]
 };
+
